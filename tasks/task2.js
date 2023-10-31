@@ -12,7 +12,6 @@ function addtoList() {
   document.getElementById("input").value = ""; // clear the value 
 }
 
-
 function pick() {
   if (inputArr.length > 0) {
     var decision = inputArr[Math.floor(Math.random() * inputArr.length)];
