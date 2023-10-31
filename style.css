@@ -1,0 +1,110 @@
+.content {
+  margin-left: 10%;
+  margin-right: 10%;
+  
+  font-family: Verdana, Tahoma, Helvetica, sans-serif;
+}
+
+body {
+    background-image: url(images/background.png);
+    background-size: cover;
+
+}
+
+article {
+ /* border: 3px solid rgb(216, 216, 225);*/
+  background-color: rgba(253,244,245,255)  ;  
+  color: rgba(46,53,146,255);
+  margin-top: 10px;
+  align-items: center;
+  text-align: center;
+  float: center;
+  border: 1px solid rgba(35,46,129,255);
+
+}
+
+nav {
+  text-align: center;
+  color: rgba(46,53,146,255);
+  background-color: rgba(253,244,245,255);
+  border: 1px solid rgba(35,46,129,255);
+
+}
+
+#image {
+  width: 25%;
+  height: 25%;
+}
+
+#box {
+  border: 1px solid rgba(35,46,129,255);
+  font-family: Verdana, Tahoma, Helvetica, sans-serif;
+  width: 80%;
+  color: rgba(46,53,146,255);
+  background-color: rgba(253,244,245,255);  
+  margin: auto;
+  text-align: center;
+  overflow: auto;
+  padding: 20px;
+}
+
+#box ul {
+  text-align: center;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  box-sizing: border-box;
+}
+
+#input p {
+  font-size: 2em;
+
+}
+
+#mydata {
+  margin: 20px;
+  width: 80%;
+  margin: auto;
+  background: white;
+  height: 60px;
+  font-family: monospace;
+  font-size: 2em;
+  text-align: center;
+  border: 1px solid rgba(35,46,129,255);
+}
+
+#options {
+  width:100%;
+  display: block;
+  padding: 20px 0px 20px 0px;
+  font-size: 1.5em;
+}
+
+button {
+  border-radius: 25px;
+  text-align: center;
+  margin: auto;
+  background-color: rgba(199,112,198,255);
+  color:white;
+  border-radius: 25px;
+}
+
+button:hover {
+  background-color: rgba(46,53,146,255);
+}
+
+#options:after {
+  content: "";
+  clear: both;
+  display: table;
+}
