@@ -42,7 +42,7 @@ body {
 #image {
   height: 24vw;
   margin: auto;
-  line-height: 12vw;
+  object-fit: cover;
 }
 
 /*
