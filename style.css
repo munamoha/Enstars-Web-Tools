@@ -104,6 +104,7 @@ body {
   font-size: 2em;
   text-align: center;
   border: 1px solid rgba(35,46,129,255);
+  font-family: "Playpen Sans", sans-serif;
 }
 
 #options {
