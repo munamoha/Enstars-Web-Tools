@@ -1,7 +1,15 @@
 .content {
   margin-left: 10%;
   margin-right: 10%;
-  
+  text-align: center;
+  background-color: rgba(253,244,245,255);
+  border: 1px solid rgba(35,46,129,255);
+  float: right; 
+  margin-top: 10px;
+  align-items: center;
+  text-align: center;
+  color: rgba(46,53,146,255);
+  float: right;
   font-family: Verdana, Tahoma, Helvetica, sans-serif;
 }
 
@@ -11,35 +19,18 @@ body {
 
 }
 
-article {
- /* border: 3px solid rgb(216, 216, 225);*/
-  background-color: rgba(253,244,245,255)  ;  
-  color: rgba(46,53,146,255);
-  margin-top: 10px;
-  align-items: center;
-  text-align: center;
-  float: center;
-  border: 1px solid rgba(35,46,129,255);
 
-}
-
-nav {
-  text-align: center;
-  color: rgba(46,53,146,255);
-  background-color: rgba(253,244,245,255);
-  border: 1px solid rgba(35,46,129,255);
-
-}
 
 #image {
-  width: 25%;
-  height: 25%;
+  width: 25vw;
+  float:left;
 }
 
 #box {
   border: 1px solid rgba(35,46,129,255);
   font-family: Verdana, Tahoma, Helvetica, sans-serif;
-  width: 80%;
+  width: 80vw;
+  height: 40vw;
   color: rgba(46,53,146,255);
   background-color: rgba(253,244,245,255);  
   margin: auto;
@@ -50,6 +41,8 @@ nav {
 
 #box ul {
   text-align: center;
+  display: table;
+  margin: 0 auto;
 }
 
 .column {
