@@ -1,55 +1,62 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> Quick Math </title>
-  <!--Favicon import-->
-  <link rel="apple-touch-icon" sizes="57x57" href="../icon/apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="../icon/apple-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="../icon/apple-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="../icon/apple-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="../icon/apple-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="../icon/apple-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="../icon/apple-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="../icon/apple-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="../icon/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="../icon/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="../icon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="../icon/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../icon/favicon-16x16.png">
-  <link rel="manifest" href="../icon/manifest.json">
-  <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="msapplication-TileImage" content="icon/ms-icon-144x144.png">
-  <meta name="theme-color" content="#ffffff">
-  <!--End of favicon import-->
-  <link href="../style.css" type="text/css" rel="stylesheet">
-  <script src="task3.js"></script>
-</head>
-<body>
-  <div class="content">
-  <h1>Need a Calculator?</h1>
-  <p>Here you can do a set of operations with two numbers.</p>
-  <div class="row">
-    <div class="column">
-      <img src="../images/keito.gif" id="image">
-    </div>
-    <div class="column">
-      <p style="font-family: monospace;" id="mydata" class="newdata"> Add Sum </p>
-      <div id="options">
-        <button id="button" onclick="addSum(10);"> 10 </button>
-        <button id="button" onclick="addSum(20);"> 20 </button>
-        <button id="button" onclick="addSum(30);"> 30 </button>
-        <button id="button" onclick="addSum(40);"> 40 </button>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Quick Math </title>
+    <!--Favicon import-->
+    <link rel="apple-touch-icon" sizes="57x57" href="../icon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../icon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../icon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../icon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../icon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../icon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../icon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../icon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../icon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../icon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../icon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../icon/favicon-16x16.png">
+    <link rel="manifest" href="../icon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="icon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!--End of favicon import-->
+    <link href="../style.css" type="text/css" rel="stylesheet">
+    <script src="task3.js" defer></script>
+  </head>
+
+  <body>
+    <div class="content">
+      <h1>Need a Calculator?</h1>
+      <p>Here you can do a set of operations with two numbers.</p>
+      <div class="row">
+        <div class="column">
+          <img src="../images/keito.gif" id="image">
+        </div>
+        <div class="column">
+          Number 1 (left side): <input id="num1" type="number" min="-32768" max="32767" />
+          Number 2 (right side): <input id="num2" type="number" min="-32768" max="32767" />
+          <p style="font-family: monospace;" id="mydata" class="newdata">Please input two numbers. </p>
+          <div id="options">
+            <button id="button" onclick="sum();"> add </button>
+            <button id="button" onclick="difference();"> subtract </button>
+            <button id="button" onclick="product();"> multiply </button>
+            <button id="button" onclick="quotient();"> divide </button>
+            <button id="button" onclick="percentage();"> percentage of </button>
+            <button id="button" onclick="modulo();"> modulo </button>
+            <button id="button" onclick="power();"> power of </button>
+          </div>
+
+        </div>
       </div>
 
+      <div id="options">
+        <button id="button" onclick="window.location.href='../index.html';">Back to Homepage</button>
+      </div>
     </div>
-  </div>
+  </body>
 
-  <div id="options">
-    <button id="button" onclick="window.location.href='../index.html';">Back to Homepage</button>
-  </div>
-</div>
-</body>
 </html>
