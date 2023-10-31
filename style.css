@@ -5,8 +5,8 @@
   font-family: "Playpen Sans", sans-serif;
 }
 
-html, body {
-  height: 80%;
+html {
+  min-height: 80%;
   margin: 0;
 }
 
@@ -14,7 +14,7 @@ html, body {
 
   text-align: center;
   width: 80vw;
-
+  padding-top: 5vw;
   margin: auto;
   background-color: rgba(253,244,245,255);
   border: 1px solid rgba(35,46,129,255);
@@ -28,6 +28,7 @@ html, body {
 }
 
 body {
+  
     background-image: url(images/background.png);
     background-size: cover;
     min-height: 100%;
