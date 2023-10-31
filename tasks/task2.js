@@ -17,6 +17,6 @@ function pick() {
     var decision = inputArr[Math.floor(Math.random() * inputArr.length)];
     p.innerHTML = decision;
   } else {
-    p.innerHTML = "No items to choose from.";
+    p.innerHTML = "No items to choose from :( please add at least 1 item.";
   }
 }
