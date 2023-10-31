@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title> Enstars Web Tools! </title>
+        <!--Favicon import-->
         <link rel="apple-touch-icon" sizes="57x57" href="icon/apple-icon-57x57.png">
         <link rel="apple-touch-icon" sizes="60x60" href="icon/apple-icon-60x60.png">
         <link rel="apple-touch-icon" sizes="72x72" href="icon/apple-icon-72x72.png">
@@ -20,31 +21,36 @@
         <meta name="msapplication-TileColor" content="#ffffff">
         <meta name="msapplication-TileImage" content="icon/ms-icon-144x144.png">
         <meta name="theme-color" content="#ffffff">
+        <!--End of favicon import-->
         <link href="style.css" type="text/css" rel="stylesheet">
         <script src="homePage.js"></script>
       </head>
 
       <body>
         <div class="content">
-  
-            <div class="text">
-              <h1>Welcome to Enstars Web Tools!</h1>
+          <h1>Welcome to Enstars Web Tools!</h1>
+          <div class="row">
+            <div class="column">
               <div class="image"><img src="images/hiiro.gif" id="image"></div>
-              <p>This website contains a set of simple tools. I started this project to get back into web development, revamping and building upon an old assignment from my first year in university (it was simpler, and I wasn't into Enstars yet, so it looks prettier now ^^). </p>
-              <p>This site uses vanilla HTML, CSS and JavaScript.</p></div>
-              <p>Try out a tool by clicking one of the buttons below!</p>
-
-              <div id="options">
-                <button id="button" onclick="window.location.href='tasks/task1.html';">Flip a Coin</button>
-                <button id="button" onclick="window.location.href='tasks/task2.html';">Random Name Picker</button>
-                <button id="button" onclick="window.location.href='tasks/task3.html';">Add Sum between Set Ranges </button>
-                <button id="button" onclick="window.location.href='tasks/task4.html';">Roll Two Dice</button>
-                <button id="button" onclick="window.location.href='tasks/task5.html';">Today's Date and Time</button>       
-                <button id="button" onclick="window.location.href='tasks/task6.html';">Countdown!</button>
             </div>
-        
-        
-      </div>
+            <div class="column">
+              <div class="text">
+                <p>This website contains a set of simple tools. I started this project to get back into web development, revamping and building upon an old assignment from my first year in university (it was simpler, and I wasn't into Enstars yet, so it looks prettier now ^^). </p>
+                <p>This site uses vanilla HTML, CSS and JavaScript.</p>
+                <p>Try out a tool by clicking one of the buttons below!</p>
+            </div>
+          </div>
+          </div>
+          <div id="options">
+            <button id="button" onclick="window.location.href='tasks/task1.html';">Flip a Coin</button>
+            <button id="button" onclick="window.location.href='tasks/task2.html';">Random Name Picker</button>
+            <button id="button" onclick="window.location.href='tasks/task3.html';">Add Sum between Set Ranges </button>
+            <button id="button" onclick="window.location.href='tasks/task4.html';">Roll Two Dice</button>
+            <button id="button" onclick="window.location.href='tasks/task5.html';">Today's Date and Time</button>       
+            <button id="button" onclick="window.location.href='tasks/task6.html';">Countdown!</button>
+          </div>  
+          </div>
+            
     </body>
       
 </html>

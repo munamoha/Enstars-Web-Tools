@@ -3,22 +3,52 @@
 
 <head>
   <meta charset="utf-8">
-  <title> Task 1 </title>
+  <title> Heads or Tails? </title>
+    <!--Favicon import-->
+    <link rel="apple-touch-icon" sizes="57x57" href="../icon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../icon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../icon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../icon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../icon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../icon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../icon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../icon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../icon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="../icon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../icon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../icon/favicon-16x16.png">
+    <link rel="manifest" href="../icon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="icon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!--End of favicon import-->
   <link href="../style.css" type="text/css" rel="stylesheet">
   <script src="task1.js"></script>
 </head>
 
 <body>
-  <div id="box">
-    <p> Heads or tails? Flip a coin!</p>
-    <img src="../images/rinne.gif" id="image">
-    <p id="mydata" class="newdata"> </p>
+  <div class="content">
+    <h1>Heads or Tails?</h1>
     
+    <div class="row">
+          <div class="column">
+           <div id="text">
+            <p>Need help making a decision? Want to try and make a bet? Do you really wanna look at Rinne Amagi? Simply click below to flip a coin and see your results.</p>
+            <p id="mydata" class="newdata"> </p>
+            <div id="options"><button id="button" onclick="myFunction();"> Flip!</button></div>
+          </div> 
+        </div>
+        <div class="column">    
+          <div class="image"><img src="../images/rinne.gif" id="image"></div>
+      </div>
+      
+    </div>
+    
+          
     <div id="options">
-
-    <button id="button" onclick="myFunction();"> Flip!</button>
       <button id="button" onclick="window.location.href='../index.html';">Back to Homepage</button>
-
+    </div>
     </div>
   </div>
 </body>
