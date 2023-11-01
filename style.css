@@ -30,7 +30,7 @@ html {
 body {
 
   background-image: linear-gradient(#36389a, #5a9dbe, #8aa7be, #c895aa, #b56cce, #8b51d3);
-  min-height: 100%;
+  background-size: cover;
 
 }
 
