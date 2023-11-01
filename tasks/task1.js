@@ -21,10 +21,10 @@ function rollDice() {
   var die1 = parseInt(rollDie());
   var die2 = parseInt(rollDie());
   if (die1 == die2) {
-    p.innerHTML = "Doubles! Dice rolls are "+die1+" and "+die2+"";
+    p.innerHTML = "Doubles! You rolled "+die1+" and "+die2+"";
   }
   else {
-    p.innerHTML = "Dice rolls are "+die1+" and "+die2+"";
+    p.innerHTML = "You rolled "+die1+" and "+die2+"";
   }
 
 }
@@ -34,6 +34,30 @@ function rollDie() {
   num = num + 1;
   return num;
 }
+
+const isOverflown = ({ clientHeight, scrollHeight }) => scrollHeight > clientHeight;
+
+const resizeText = ({ element, parent }) => {
+  let i = 12 // let's start with 12px
+  let overflow = false
+  const maxSize = 128 // very huge text size
+
+  while (!overflow && i < maxSize) {
+    element.style.fontSize = `${i}px`
+    overflow = isOverflown(parent)
+    if (!overflow) i++
+  }
+
+  // revert to last state where no overflow happened:
+  element.style.fontSize = `${i - 1}px`
+}
+
+
+resizeText({
+  element:  document.getElementById("mydata").innerHTML,
+  parent: document.getElementById("mydata")
+})
+
 
 
 
