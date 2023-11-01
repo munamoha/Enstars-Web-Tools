@@ -16,21 +16,21 @@ html {
   width: 80vw;
   padding-top: 5vw;
   margin: auto;
-  background-color: rgba(253,244,245,255);
-  border: 1px solid rgba(35,46,129,255);
+  background-color: rgba(253, 244, 245, 255);
+  border: 1px solid rgba(35, 46, 129, 255);
 
   align-items: center;
   text-align: center;
-  color: rgba(46,53,146,255);
+  color: rgba(46, 53, 146, 255);
 
   padding: 2vw;
-  
+
 }
 
 body {
-  
-    background-image: linear-gradient(#36389a, #5a9dbe, #8aa7be, #c895aa, #b56cce, #8b51d3);
-   
+
+  background-image: linear-gradient(#36389a, #5a9dbe, #8aa7be, #c895aa, #b56cce, #8b51d3);
+  min-height: 100%;
 
 }
 
@@ -72,8 +72,8 @@ body {
   margin: auto;
   width: 50%;
   box-sizing: border-box;
-  
-  
+
+
 }
 
 .row:after {
@@ -88,6 +88,7 @@ body {
   .column {
     width: 100%;
   }
+
   body {
     height: 90vh;
   }
@@ -107,12 +108,12 @@ body {
   font-family: monospace;
   font-size: 1.75em;
   text-align: center;
-  border: 1px solid rgba(35,46,129,255);
+  border: 1px solid rgba(35, 46, 129, 255);
   font-family: "Playpen Sans", sans-serif;
 }
 
 #options {
-  width:100%;
+  width: 100%;
   display: block;
   padding: 20px 0px 20px 0px;
   font-size: 1.5em;
@@ -122,13 +123,13 @@ button {
   border-radius: 25px;
   text-align: center;
   margin: auto;
-  background-color: rgba(199,112,198,255);
-  color:white;
+  background-color: rgba(199, 112, 198, 255);
+  color: white;
   border-radius: 25px;
 }
 
 button:hover {
-  background-color: rgba(46,53,146,255);
+  background-color: rgba(46, 53, 146, 255);
 }
 
 #options:after {
