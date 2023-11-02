@@ -31,15 +31,19 @@
 <body>
   <div class="content">
     <h1>Need a Calculator?</h1>
-    <p>Here you can do a set of operations with two numbers.</p>
+    <p>Here you can do a set of operations with two numbers, integer or decimal.</p>
     <div class="row">
       <div class="column">
         <img src="../images/keito.gif" id="image">
       </div>
       <div class="column">
         <div id="form">
-          Number 1 (left side): <input id="num1" type="number" min="-32768" max="32767" /> <br>
-          Number 2 (right side): <input id="num2" type="number" min="-32768" max="32767" />
+          Number 1 (left side): <input id="num1" type="number" min="-32768" max="32767" step="any"/> <br>
+          Number 2 (right side): <input id="num2" type="number" min="-32768" max="32767" step="any"/> <br>
+          <p>
+            <button id="button" onclick="set();"> Set Numbers </button>
+            <button id="button" onclick="swap();"> Swap Numbers </button>
+          </p>
         </div>
         <p id="mydata" class="newdata">Please input two numbers. </p>
         <div id="options">
@@ -47,9 +51,11 @@
           <button id="button" onclick="difference();"> subtract </button>
           <button id="button" onclick="product();"> multiply </button>
           <button id="button" onclick="quotient();"> divide </button>
+          <br>
           <button id="button" onclick="percentage();"> percentage of </button>
           <button id="button" onclick="modulo();"> modulo </button>
           <button id="button" onclick="power();"> power of </button>
+          <button id="button" onclick="nthroot();"> nth root </button>
         </div>
 
       </div>

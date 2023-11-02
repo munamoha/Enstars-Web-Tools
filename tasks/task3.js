@@ -1,58 +1,66 @@
+let a = 0;
+let b = 0;
+function set() {
+  a = document.getElementById("num1").value;
+  b = document.getElementById("num2").value;
+  document.getElementById("mydata").innerHTML = "Set Numbers: " + a + " and " + b;
+}
 
- function sum() {
-  var a = document.getElementById("num1").value;
-  var b = document.getElementById("num2").value;
-  var sums = parseInt(a) + parseInt(b);
-  var answer = "" + a + " + " + b + " = " + sums + ".";
+function swap() {
+  var temp = a;
+  a = b;
+  b = temp;
+  document.getElementById("num1").innerHTML = a;
+  document.getElementById("num2").innerHTML = b;
+  document.getElementById("mydata").innerHTML = "Set Numbers: " + a + " and " + b;
+}
+
+function sum() {
+  var sums = parseFloat(a) + parseFloat(b);
+  var answer = "" + a + " + " + b + " = " + sums;
   document.getElementById("mydata").innerHTML = answer;
 }
 
 function difference()  {
-  var a = document.getElementById("num1").value;
-  var b = document.getElementById("num2").value;
-  var diff = parseInt(a) - parseInt(b);
-  var answer = "" + a + " - " + b + " = " + diff + ".";
+  var diff = parseFloat(a) - parseFloat(b);
+  var answer = "" + a + " - " + b + " = " + diff;
   document.getElementById("mydata").innerHTML = answer;
 }
 
 function product()  {
-  var a = document.getElementById("num1").value;
-  var b = document.getElementById("num2").value;
-  var prod = parseInt(a) * parseInt(b);
-  var answer = "" + a + " x " + b + " = " + prod + ".";
+  var prod = parseFloat(a) * parseFloat(b);
+  var answer = "" + a + " x " + b + " = " + prod;
   document.getElementById("mydata").innerHTML = answer;
 }
 
 
 function quotient()  {
-  var a = document.getElementById("num1").value;
-  var b = document.getElementById("num2").value;
-  var quo = parseInt(a) / parseInt(b);
-  var answer = "" + a + " ÷ " + b + " = " + quo + ".";
+  var quo = parseFloat(a) / parseFloat(b);
+  var answer = "" + a + " ÷ " + b + " = " + quo;
   document.getElementById("mydata").innerHTML = answer;
 }
 
 function percentage() {
-  var a = document.getElementById("num1").value;
-  var b = document.getElementById("num2").value;
-  var per = (parseInt(a) / 100) * parseInt(b);
-  var answer = "" + a + "% of " + b + " = " + per + ".";
+  var per = (parseFloat(a) / 100) * parseFloat(b);
+  var answer = "" + a + "% of " + b + " = " + per;
   document.getElementById("mydata").innerHTML = answer;
 }
 
 function modulo() {
-  var a = document.getElementById("num1").value;
-  var b = document.getElementById("num2").value;
-  var per =parseInt(a) % parseInt(b);
-  var answer = "" + a + " mod " + b + " = " + per + ".";
+  var per =parseFloat(a) % parseFloat(b);
+  var answer = "" + a + " mod " + b + " = " + per;
   document.getElementById("mydata").innerHTML = answer;
 }
 
 function power() {
-  var a = document.getElementById("num1").value;
-  var b = document.getElementById("num2").value;
-  var exp = Math.pow(parseInt(a), parseInt(b));
-  var answer = "" + a + "<sup>" + b + "</sup>" + " = " + exp + ".";
+  var exp = Math.pow(parseFloat(a), parseFloat(b));
+  var answer = "" + a + "<sup>" + b + "</sup>" + " = " + exp;
+  document.getElementById("mydata").innerHTML = answer;
+}
+
+function nthroot() {
+  var root = Math.pow(parseFloat(a), (1 / parseFloat(b)));
+  var answer = "" + a + " with root " + b + " = " + root;
   document.getElementById("mydata").innerHTML = answer;
 }
 
