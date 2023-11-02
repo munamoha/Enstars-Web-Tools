@@ -122,7 +122,7 @@ button {
   background-color: rgba(199, 112, 198, 255);
   color: white;
   border-radius: 25px;
-  font-size: 1.5em;
+  font-size: 0.8em;
 }
 
 button:hover {
