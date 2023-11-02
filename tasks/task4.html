@@ -1,24 +1,61 @@
-<!-- JavaScript Examples, EECS 1012 Fall 2018 -->
-<!-- (CC) Michael S. Brown; revised by Amir H. Chinaei -->
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Date and Time Tools!</title>
+     <!--Favicon import-->
+     <link rel="apple-touch-icon" sizes="57x57" href="icon/apple-icon-57x57.png">
+     <link rel="apple-touch-icon" sizes="60x60" href="icon/apple-icon-60x60.png">
+     <link rel="apple-touch-icon" sizes="72x72" href="icon/apple-icon-72x72.png">
+     <link rel="apple-touch-icon" sizes="76x76" href="icon/apple-icon-76x76.png">
+     <link rel="apple-touch-icon" sizes="114x114" href="icon/apple-icon-114x114.png">
+     <link rel="apple-touch-icon" sizes="120x120" href="icon/apple-icon-120x120.png">
+     <link rel="apple-touch-icon" sizes="144x144" href="icon/apple-icon-144x144.png">
+     <link rel="apple-touch-icon" sizes="152x152" href="icon/apple-icon-152x152.png">
+     <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-icon-180x180.png">
+     <link rel="icon" type="image/png" sizes="192x192"  href="icon/android-icon-192x192.png">
+     <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
+     <link rel="icon" type="image/png" sizes="96x96" href="icon/favicon-96x96.png">
+     <link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
+     <link rel="manifest" href="icon/manifest.json">
+     <meta name="msapplication-TileColor" content="#ffffff">
+     <meta name="msapplication-TileImage" content="icon/ms-icon-144x144.png">
+     <meta name="theme-color" content="#ffffff">
+     <!--End of favicon import-->
+    <link href="../style.css" type="text/css" rel="stylesheet" />
+    <script src="task4.js" defer type="text/javascript"></script>
+  </head>
 
-<head>
-  <!-- TODO 1: link to external JS file.  Note that <script> has an
-  end </script> tag -->
-  <meta charset="utf-8">
-  <title> Task 4 </title>
-  <link href="../style.css" type="text/css" rel="stylesheet">
-  <script src="task4.js"></script>
-</head>
-
-<body>
-  <div id="box">
-    <!-- TODO 2: Create a paragraph with id mydata and content Roll Dice-->
-    <p id="mydata"> Roll Dice </p>
-    <!-- TODO 3: Create 1 button that for onclick event, invokes myFunction-->
-    <p> <button id="button" onclick="myFunction();"> Roll Dice </button></p>
-  </div>
-</body>
-
+  <body>
+    <div class="content">
+      <h1>Date and Time Tools!</h1>
+      <p>
+        NWhat's the time now? What's the difference between two dates? Let's
+        find out!
+        <br />
+        Let's utilize these tools.
+      </p>
+      <div class="row">
+        <div class="column">
+          <div class="image">
+            <!-- <img src="../images/rinne.gif" id="image"> -->
+            placeholder for when i grab the asset for bunny mitsuru :]
+          </div>
+        </div>
+        <div class="column">
+          <div id="text">
+            <p id="mydata" class="newdata">Choose an option below!</p>
+            <div id="options">
+              <p>
+                <button onclick="myFunction();">Click</button>
+                <button id="button" onclick="window.location.href='../index.html';"> Back to Homepage </button>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p id="mydata" class="newdata">Date and Time Right Now</p>
+    </div>
+  </body>
 </html>
