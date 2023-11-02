@@ -15,6 +15,7 @@ html {
   text-align: center;
   width: 80vw;
   padding-top: 5vw;
+  height: 85vh;
   margin: auto;
   background-color: rgba(253, 244, 245, 255);
   border: 1px solid rgba(35, 46, 129, 255);
@@ -23,7 +24,7 @@ html {
   text-align: center;
   color: rgba(46, 53, 146, 255);
 
-  padding: 2vw;
+  overflow: scroll;
 
 }
 
@@ -44,38 +45,31 @@ head, body, footer {
   object-fit: cover;
 }
 
-/*
-#box {
-  border: 1px solid rgba(35,46,129,255);
-  font-family: Verdana, Tahoma, Helvetica, sans-serif;
-  width: 80vw;
-  height: 40vw;
-  color: rgba(46,53,146,255);
-  background-color: rgba(253,244,245,255);  
-  margin: auto;
-  text-align: center;
-  overflow: auto;
-  
-  margin: auto;
-}
-*/
 
-.content ol {
+ol {
   text-align: center;
   display: table;
   margin: auto;
-  max-height: 2vw;
+  height: 20%;
+  overflow-y: auto;
 }
 
 .column {
   float: left;
   margin: auto;
   width: 50%;
+  height: 45vh;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
 
 
 }
+#num1, #num2{
+  width: 2vw;
 
+}
 .row:after {
   content: "";
   display: table;
@@ -87,6 +81,7 @@ head, body, footer {
 @media screen and (max-width: 900px) {
   .column {
     width: 100%;
+    height:fit-content;
   }
 
   body {
