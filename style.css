@@ -25,6 +25,7 @@ html {
   color: rgba(46, 53, 146, 255);
 
   overflow: scroll;
+  scrollbar-color:  #c895aa #b56cce;
 
 }
 
