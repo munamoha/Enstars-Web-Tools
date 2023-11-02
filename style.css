@@ -63,9 +63,8 @@ ol {
   display: flex;
   flex-direction: column;
   overflow: auto;
-
-
 }
+
 #num1, #num2{
   width: 2vw;
 
