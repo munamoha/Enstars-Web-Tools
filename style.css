@@ -29,7 +29,7 @@ html {
 
 head, body, footer {
 
-  background-image: linear-gradient(#36389a, #5a9dbe, #8aa7be, #c895aa, #b56cce, #8b51d3);
+  background-image: linear-gradient(#5a9dbe, #8aa7be, #c895aa, #b56cce, #8b51d3, #b56cce, #c895aa, #8aa7be, #5a9dbe);
   background-size: cover;
 
 } 
@@ -100,16 +100,17 @@ head, body, footer {
 }
 
 #mydata {
-  margin: 20px;
   width: 80%;
   margin: auto;
   background: white;
   height: 60px;
+  line-height: 60px;
   font-family: monospace;
-  font-size: 1.75em;
+  font-size: 1.5em;
   text-align: center;
   border: 1px solid rgba(35, 46, 129, 255);
   font-family: "Playpen Sans", sans-serif;
+  display:table;
 }
 
 #options {
