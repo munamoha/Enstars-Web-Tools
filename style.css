@@ -27,12 +27,12 @@ html {
 
 }
 
-body {
+head, body, footer {
 
   background-image: linear-gradient(#36389a, #5a9dbe, #8aa7be, #c895aa, #b56cce, #8b51d3);
   background-size: cover;
 
-}
+} 
 
 #text {
   margin: auto;
