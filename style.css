@@ -95,13 +95,13 @@ ol {
 }
 
 #mydata {
-  width: 80%;
+  width: 75%;
   margin: auto;
   background: white;
-  height: 60px;
-  line-height: 60px;
+  height: 50px;
+  line-height: 50px;
   font-family: monospace;
-  font-size: 1.5em;
+  font-size: 1.25em;
   text-align: center;
   border: 1px solid rgba(35, 46, 129, 255);
   font-family: "Playpen Sans", sans-serif;

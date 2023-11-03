@@ -10,13 +10,16 @@
      <!--End of favicon import-->
     <link href="../style.css" type="text/css" rel="stylesheet" />
     <script src="task4.js" defer type="text/javascript"></script>
+   
+
+
   </head>
 
   <body>
     <div class="content">
       <h1>Date and Time Tools!</h1>
       <p>
-        NWhat's the time now? What's the difference between two dates? Let's
+        What's the time now? What's the difference between two dates? Let's
         find out!
         <br />
         Let's utilize these tools.
@@ -24,23 +27,32 @@
       <div class="row">
         <div class="column">
           <div class="image">
-            <!-- <img src="../images/rinne.gif" id="image"> -->
-            placeholder for when i grab the asset for bunny mitsuru :]
+            <img src="../images/mitsuru.gif" id="image">
+        
           </div>
         </div>
         <div class="column">
           <div id="text">
-            <p id="mydata" class="newdata">Choose an option below!</p>
-            <div id="options">
+            Please click on the boxes below to set a date and a time!
+            <input type="date" id="calendar">
+            Input time: 
+            <input type="time" id="time">
               <p>
-                <button onclick="myFunction();">Click</button>
-                <button id="button" onclick="window.location.href='../index.html';"> Back to Homepage </button>
+                <button id="button" onclick="setDate();"> Set Date </button>
+                <button id="button" onclick="setTime();"> Set Time </button>
+
               </p>
+           
+            <p id="mydata" class="newdata">Pick an option and it will display here!</p>
+            <div id="options">
+                <button id="button" onclick="currentDate();">Current Date and Time</button>
             </div>
           </div>
         </div>
       </div>
-      <p id="mydata" class="newdata">Date and Time Right Now</p>
+      <div id="options">
+        <button id="button" onclick="window.location.href='../index.html';"> Back to Homepage </button>
+      </div>
     </div>
   </body>
 </html>
