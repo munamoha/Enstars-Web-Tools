@@ -1,8 +1,11 @@
 let date = new Date();
 let time;
+let timeValues = [];
 let p = document.getElementById("mydata");
 let allMonths = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 let allDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+let hours;
+let mins;
 
 
 function setDate() {
@@ -22,7 +25,7 @@ function setTime() {
     p.innerHTML = "No input :( Please input a time.";
   }
   else {
-    p.innerHTML = time;
+    p.innerHTML = "Your input: " + time + "!";
   }
 }
 
