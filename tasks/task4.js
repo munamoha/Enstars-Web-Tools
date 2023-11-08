@@ -72,7 +72,7 @@ button2.addEventListener('click', () => {
   document.getElementById('mydata').appendChild(button3);
 
   button3.addEventListener('click',  () => {
-    calculateDifference(date3.value)
+    calculateDifference(date3.value+"T00:00:00")
   } )
 }
 
@@ -84,41 +84,49 @@ button2.addEventListener('click', () => {
 function calculateDifference(date1Input) {
   let date2Input = document.getElementById("second").value;
 
- // Parse the input dates into Date objects
-  let date1 = new Date(date1Input);
-  let date2 = new Date(date2Input);
-
-  // Calculate the time difference in milliseconds
-  let difference = Math.abs(date2 - date1);
-
-  // Convert milliseconds to days
-  let daysDifference = Math.floor(difference / (1000 * 60 * 60 * 24));
-
-  // Convert days
-  let yearsDifference = Math.floor(daysDifference / 365);
-  let monthsDifference = Math.floor((daysDifference % 365) / 30);
-  let remainingDays = Math.floor(daysDifference % 30);
-
-  //Display the result
+  //set display element
   let resultElement = document.getElementById("mydata");
 
   let result = [];
 
-if (yearsDifference > 0) {
-    result.push(`${yearsDifference} year${yearsDifference !== 1 ? "s" : ""}`);
-  }
-  if (monthsDifference > 0) {
-    result.push(`${monthsDifference} month${monthsDifference !== 1 ? "s" : ""}`);
-  }
-  if (remainingDays > 0) {
-    result.push(`${remainingDays} day${remainingDays !== 1 ? "s" : ""}`);
+  if (!date2Input) {
+    resultElement.textContent = "Please input a date before clicking the button!!";
   }
 
-  if (result.length === 0) {
-    resultElement.textContent = "The dates are the same (or you didn't input them, you know who you are -_-).";
-  } else {
-    resultElement.textContent = `The difference between the two dates is ${result.join(", ")}.`;
+  else {
+    // Parse the input dates into Date objects
+    let date1 = new Date(date1Input);
+    let date2 = new Date(document.getElementById("second").value+"T00:00:00");
+
+    // Calculate the time difference in milliseconds
+    let difference = Math.abs(date2 - date1);
+
+    // Convert milliseconds to days
+    let daysDifference = Math.floor(difference / (1000 * 60 * 60 * 24));
+
+    // Convert days
+    let yearsDifference = Math.floor(daysDifference / 365);
+    let monthsDifference = Math.floor((daysDifference % 365) / 30);
+    let remainingDays = Math.floor(daysDifference % 30);
+
+
+  if (yearsDifference > 0) {
+      result.push(`${yearsDifference} year${yearsDifference !== 1 ? "s" : ""}`);
+    }
+    if (monthsDifference > 0) {
+      result.push(`${monthsDifference} month${monthsDifference !== 1 ? "s" : ""}`);
+    }
+    if (remainingDays > 0) {
+      result.push(`${remainingDays} day${remainingDays !== 1 ? "s" : ""}`);
+    }
+
+    if (result.length === 0) {
+      resultElement.textContent = "The dates are the same.";
+    } else {
+      resultElement.textContent = `The difference between the two dates is ${result.join(", ")}.`;
+    }
   }
+
 }
 
 const isOverflown = ({ clientHeight, scrollHeight }) => scrollHeight > clientHeight;
