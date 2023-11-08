@@ -75,10 +75,7 @@ button2.addEventListener('click', () => {
     calculateDifference(date3.value+"T00:00:00")
   } )
 }
-
 )
-
-
 }
 
 function calculateDifference(date1Input) {
@@ -97,6 +94,101 @@ function calculateDifference(date1Input) {
     // Parse the input dates into Date objects
     let date1 = new Date(date1Input);
     let date2 = new Date(document.getElementById("second").value+"T00:00:00");
+
+    // Calculate the time difference in milliseconds
+    let difference = Math.abs(date2 - date1);
+
+    // Convert milliseconds to days
+    let daysDifference = Math.floor(difference / (1000 * 60 * 60 * 24));
+
+    // Convert days
+    let yearsDifference = Math.floor(daysDifference / 365);
+    let monthsDifference = Math.floor((daysDifference % 365) / 30);
+    let remainingDays = Math.floor(daysDifference % 30);
+
+
+  if (yearsDifference > 0) {
+      result.push(`${yearsDifference} year${yearsDifference !== 1 ? "s" : ""}`);
+    }
+    if (monthsDifference > 0) {
+      result.push(`${monthsDifference} month${monthsDifference !== 1 ? "s" : ""}`);
+    }
+    if (remainingDays > 0) {
+      result.push(`${remainingDays} day${remainingDays !== 1 ? "s" : ""}`);
+    }
+
+    if (result.length === 0) {
+      resultElement.textContent = "The dates are the same.";
+    } else {
+      resultElement.textContent = `The difference between the two dates is ${result.join(", ")}.`;
+    }
+  }
+
+}
+
+function betweenTimes() {
+  const button4 = document.createElement('button');
+  const button5 = document.createElement('button');
+  button4.id = 'setTime';
+  button5.id = 'set2Times';
+  button4.innerText = "Between Set Time and New Time";
+  button5.innerText = "Between Two New Times";
+ p.innerHTML = "Choose to either compare with the set times, or with two different times.";
+ document.getElementById('mydata').appendChild(button4);
+ document.getElementById('mydata').appendChild(button5);
+ 
+  button4.addEventListener('click', () => {
+   p.innerHTML = "Set a new time to compare.\n";
+   const time2 = document.createElement('input');
+   time2.type = "time";
+   time2.id = "secondTime";
+   document.getElementById('mydata').appendChild(time2);
+   const button6 = document.createElement('button');
+   button6.id = "select1Time";
+   button6.innerHTML = "Calculate Difference";
+   document.getElementById('mydata').appendChild(button6);
+ 
+   button6.addEventListener('click',  () => {
+     calculateTimeDiff(time)
+   } )
+ })
+ 
+ button5.addEventListener('click', () => {
+  p.innerHTML = "Set two new times to compare.\n";
+   const time2 = document.createElement('input');
+   time2.type = "time";
+   time2.id = "secondTime";
+   document.getElementById('mydata').appendChild(time2);
+   const time3 = document.createElement('input');
+   time3.type = "time";
+   time3.id = "thirdTime";
+   document.getElementById('mydata').appendChild(time3);
+   const button6 = document.createElement('button');
+   button6.id = "select1Time";
+   button6.innerHTML = "Calculate Difference";
+   document.getElementById('mydata').appendChild(button6);
+ 
+   button6.addEventListener('click',  () => {
+     calculateTimeDiff(time3.value)
+   } )
+ }
+ )
+}
+
+function calculateTimeDiff(time1) {
+  let time2 = document.getElementById("secondTime").value;
+
+  //set display element
+  let resultElement = document.getElementById("mydata");
+
+  let result = [];
+
+  if (!time2) {
+    resultElement.textContent = "Please input a time before clicking the button!!";
+  }
+
+  else {
+    // Parse the input dates into Date objects
 
     // Calculate the time difference in milliseconds
     let difference = Math.abs(date2 - date1);
