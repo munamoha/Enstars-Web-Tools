@@ -21,20 +21,20 @@ function sum() {
   document.getElementById("mydata").innerHTML = answer;
 }
 
-function difference()  {
+function difference() {
   var diff = parseFloat(a) - parseFloat(b);
   var answer = "" + a + " - " + b + " = " + diff;
   document.getElementById("mydata").innerHTML = answer;
 }
 
-function product()  {
+function product() {
   var prod = parseFloat(a) * parseFloat(b);
   var answer = "" + a + " x " + b + " = " + prod;
   document.getElementById("mydata").innerHTML = answer;
 }
 
 
-function quotient()  {
+function quotient() {
   var quo = parseFloat(a) / parseFloat(b);
   var answer = "" + a + " ÷ " + b + " = " + quo;
   document.getElementById("mydata").innerHTML = answer;
@@ -47,7 +47,7 @@ function percentage() {
 }
 
 function modulo() {
-  var per =parseFloat(a) % parseFloat(b);
+  var per = parseFloat(a) % parseFloat(b);
   var answer = "" + a + " mod " + b + " = " + per;
   document.getElementById("mydata").innerHTML = answer;
 }
@@ -83,7 +83,7 @@ const resizeText = ({ element, parent }) => {
 
 
 resizeText({
-  element:  document.getElementById("mydata").innerHTML,
+  element: document.getElementById("mydata").innerHTML,
   parent: document.getElementById("mydata")
 })
 

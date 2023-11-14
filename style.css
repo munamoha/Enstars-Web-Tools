@@ -41,7 +41,7 @@ head, body, footer {
 }
 
 #image {
-  height: 20vw;
+  height: 19vw;
   margin: auto;
   object-fit: cover;
 }
@@ -64,6 +64,7 @@ ol {
   display: flex;
   flex-direction: column;
   overflow: auto;
+  padding: 0.75em;
 }
 
 #num1, #num2{

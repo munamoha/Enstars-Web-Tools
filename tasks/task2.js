@@ -2,7 +2,7 @@ let inputArr = [];
 var p = document.getElementById("mydata");
 var input = document.getElementById("input");
 
-input.addEventListener("keypress", function(event) {
+input.addEventListener("keypress", function (event) {
   // If the user presses the "Enter" key on the keyboard
   if (event.key === "Enter") {
     // Cancel the default action, if needed
@@ -10,7 +10,7 @@ input.addEventListener("keypress", function(event) {
     // Trigger the button element with a click
     document.getElementById("add-btn").click();
   }
-}); 
+});
 
 function addtoList() {
 
@@ -50,7 +50,7 @@ const resizeText = ({ element, parent }) => {
 
 
 resizeText({
-  element:  document.getElementById("mydata").innerHTML,
+  element: document.getElementById("mydata").innerHTML,
   parent: document.getElementById("mydata")
 })
 

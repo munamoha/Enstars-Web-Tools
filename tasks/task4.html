@@ -1,57 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Date and Time Tools!</title>
-     <!--Favicon import-->
-     <link rel="shortcut icon" href="../icon/mitsuru/favicon.ico" type="image/x-icon">
-     <link rel="icon" href="../icon/mitsuru/favicon.ico" type="image/x-icon">
-     <!--End of favicon import-->
-    <link href="../style.css" type="text/css" rel="stylesheet" />
-    <script src="task4.js" defer type="text/javascript"></script>
-   
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Date and Time Tools!</title>
+  <!--Favicon import-->
+  <link rel="shortcut icon" href="../icon/mitsuru/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="../icon/mitsuru/favicon.ico" type="image/x-icon">
+  <!--End of favicon import-->
+  <link href="../style.css" type="text/css" rel="stylesheet" />
+  <script src="task4.js" defer type="text/javascript"></script>
 
 
-  </head>
 
-  <body>
-    <div class="content">
-      <h1>Date and Time Tools!</h1>
-      <p>
-        What's the time now? What's the difference between two dates? Let's
-        find out!
-      </p>
-      <div class="row">
-        <div class="column">
-          <div class="image">
-            <img src="../images/mitsuru.gif" id="image">
-        
-          </div>
-        </div>
-        <div class="column">
-          <div id="text">
-            Please click on the boxes below to set a date and a time!
-            <input type="date" id="calendar">
-            Input time: 
-            <input type="time" id="time">
-              <p>
-                <button id="button" onclick="setDate();"> Set Date </button>
-                <button id="button" onclick="setTime();"> Set Time </button>
+</head>
 
-              </p>
-           
-            <p id="mydata" class="newdata">Pick an option and it will display here!</p>
-            <div id="options">
-                <button id="button" onclick="betweenTwo();">Difference between Two Dates</button>
-                <button id="button" onclick="betweenTimes();">Difference between Two Times</button>
-            </div>
-          </div>
+<body>
+  <div class="content">
+    <h1>Date and Time Tools!</h1>
+    <p>
+      What's the time now? What's the difference between two dates? Let's
+      find out!
+    </p>
+    <div class="row">
+      <div class="column">
+        <div class="image">
+          <img src="../images/mitsuru.gif" id="image">
+
         </div>
       </div>
-      <div id="options">
-        <button id="button" onclick="window.location.href='../index.html';"> Back to Homepage </button>
+      <div class="column">
+        <div id="text">
+          Please click on the boxes below to set a date and a time!
+          <input type="date" id="calendar">
+          Input time:
+          <input type="time" id="time">
+          <p>
+            <button id="button" onclick="setDate();"> Set Date </button>
+            <button id="button" onclick="setTime();"> Set Time </button>
+
+          </p>
+
+          <p id="mydata" class="newdata">Pick an option and it will display here!</p>
+          <div id="options">
+            <button id="button" onclick="betweenTwo();">Difference between Two Dates</button>
+            <button id="button" onclick="betweenTimes();">Difference between Two Times</button>
+          </div>
+        </div>
       </div>
     </div>
-  </body>
+    <div id="options">
+      <button id="button" onclick="window.location.href='../index.html';"> Back to Homepage </button>
+    </div>
+  </div>
+</body>
+
 </html>
