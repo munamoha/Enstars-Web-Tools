@@ -123,7 +123,6 @@ function calculateDifference(date1Input) {
       resultElement.textContent = `The difference between the two dates is ${result.join(", ")}.`;
     }
   }
-
 }
 
 function betweenTimes() {
@@ -175,47 +174,36 @@ function betweenTimes() {
  )
 }
 
-function calculateTimeDiff(time1) {
-  let time2 = document.getElementById("secondTime").value;
+function calculateTimeDiff(time1Input) {
+  let time2Input = document.getElementById("secondTime").value;
+  const time1 = new Date(`${date.toISOString().split('T')[0]}T${time1Input}`);
+  const time2 = new Date(`${date.toISOString().split('T')[0]}T${time2Input}`);
 
   //set display element
   let resultElement = document.getElementById("mydata");
 
-  let result = [];
 
   if (!time2) {
     resultElement.textContent = "Please input a time before clicking the button!!";
   }
-
+  
   else {
     // Parse the input dates into Date objects
 
     // Calculate the time difference in milliseconds
-    let difference = Math.abs(date2 - date1);
-
-    // Convert milliseconds to days
-    let daysDifference = Math.floor(difference / (1000 * 60 * 60 * 24));
+    let difference = Math.abs(time2 - time1);
 
     // Convert days
-    let yearsDifference = Math.floor(daysDifference / 365);
-    let monthsDifference = Math.floor((daysDifference % 365) / 30);
-    let remainingDays = Math.floor(daysDifference % 30);
-
-
-  if (yearsDifference > 0) {
-      result.push(`${yearsDifference} year${yearsDifference !== 1 ? "s" : ""}`);
+    const hoursDifference = Math.floor(difference / (1000 * 60 * 60));
+    const minutesDifference = Math.floor((difference / (1000 * 60)) % 60);
+    const secondsDifference = Math.floor((difference / 1000) % 60);
+  
+    const resultElement = document.getElementById("timeResult");
+    if (difference === 0) {
+      resultElement.textContent = "No difference between times."
     }
-    if (monthsDifference > 0) {
-      result.push(`${monthsDifference} month${monthsDifference !== 1 ? "s" : ""}`);
-    }
-    if (remainingDays > 0) {
-      result.push(`${remainingDays} day${remainingDays !== 1 ? "s" : ""}`);
-    }
-
-    if (result.length === 0) {
-      resultElement.textContent = "The dates are the same.";
-    } else {
-      resultElement.textContent = `The difference between the two dates is ${result.join(", ")}.`;
+    else {
+      resultElement.textContent = `The difference between the two times is ${hoursDifference} hours, ${minutesDifference} minutes, and ${secondsDifference} seconds.`;
     }
   }
 
