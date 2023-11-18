@@ -139,7 +139,7 @@ function betweenTimes() {
   button5.id = 'set2Times';
   button4.innerText = "Between Set Time and New Time";
   button5.innerText = "Between Two New Times";
-  p.innerHTML = "Choose to either compare with the set times, or with two different times. \n";
+  p.innerHTML = "Choose to either compare with the set times, or with two different times.\n";
   document.getElementById('mydata').appendChild(button4);
   document.getElementById('mydata').appendChild(button5);
 
