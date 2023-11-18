@@ -92,8 +92,13 @@ function calculateDifference(date1Input) {
   }
 
   else {
+    // Check if the first date includes the time "T00:00:00" to ensure dates are not off
+    if (!date1Input.includes("T00:00:00")) {
+      // If not present, add it
+      date1Input += "T00:00:00";
+    }
     // Parse the input dates into Date objects
-    let date1 = new Date(date1Input + "T00:00:00");
+    let date1 = new Date(date1Input);
     let date2 = new Date(date2Input + "T00:00:00");
 
     // Calculate the time difference in milliseconds
