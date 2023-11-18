@@ -1,6 +1,6 @@
 let date;
 let time;
-let p = document.getElementById("mydata");
+const p = document.getElementById("mydata");
 let allMonths = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 let allDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 let hours;
