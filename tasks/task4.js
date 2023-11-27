@@ -1,6 +1,6 @@
 let date;
 let time;
-let p = document.getElementById("mydata");
+const p = document.getElementById("mydata");
 let allMonths = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 let allDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 let hours;
@@ -92,7 +92,9 @@ function calculateDifference(date1Input) {
 
   else {
     // Parse the input dates into Date objects
+    // Check if the first date includes the time "T00:00:00" to ensure dates are not off
     if (!date1Input.includes("T00:00:00")) {
+      // If not present, add it
       date1Input += "T00:00:00";
     }
 
