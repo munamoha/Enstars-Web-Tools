@@ -51,7 +51,7 @@ function betweenTwo() {
     button3.innerHTML = "Calculate Difference";
     document.getElementById('mydata').appendChild(button3);
     button3.addEventListener('click', () => {
-      calculateDifference(date.value)
+      calculateDifference(date)
     })
   })
 
