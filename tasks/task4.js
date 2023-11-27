@@ -36,7 +36,7 @@ function betweenTwo() {
   button2.id = 'set2Dates';
   button.innerText = "Between Set Date and New Date";
   button2.innerText = "Between Two New Dates";
-  p.innerHTML = "Choose to either compare with the set date, or with two different dates.";
+  p.innerHTML = "Choose to either compare with the set date, or with two different dates.\n";
   document.getElementById('mydata').appendChild(button);
   document.getElementById('mydata').appendChild(button2);
 
@@ -91,6 +91,11 @@ function calculateDifference(date1Input) {
   }
 
   else {
+    // Check if the first date includes the time "T00:00:00" to ensure dates are not off
+    if (!date1Input.includes("T00:00:00")) {
+      // If not present, add it
+      date1Input += "T00:00:00";
+    }
     // Parse the input dates into Date objects
     // Check if the first date includes the time "T00:00:00" to ensure dates are not off
     if (!date1Input.includes("T00:00:00")) {
@@ -139,7 +144,7 @@ function betweenTimes() {
   button5.id = 'set2Times';
   button4.innerText = "Between Set Time and New Time";
   button5.innerText = "Between Two New Times";
-  p.innerHTML = "Choose to either compare with the set times, or with two different times.";
+  p.innerHTML = "Choose to either compare with the set times, or with two different times.\n";
   document.getElementById('mydata').appendChild(button4);
   document.getElementById('mydata').appendChild(button5);
 
