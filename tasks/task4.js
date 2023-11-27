@@ -8,12 +8,13 @@ let mins;
 
 
 function setDate() {
-  date = new Date(document.getElementById("calendar").value + "T00:00:00");
+  date = document.getElementById("calendar").value;
+  let displayDate = new Date(date + "T00:00:00");
   if (document.getElementById("calendar").value == "") {
     p.innerHTML = "No input :( Please input a date.";
   }
   else {
-    p.innerHTML = "Your input: " + allDays[date.getDay()] + ", " + allMonths[date.getMonth()] + " " + date.getDate() + ", " + date.getFullYear() + "!";
+    p.innerHTML = "Your input: " + allDays[displayDate.getDay()] + ", " + allMonths[displayDate.getMonth()] + " " + displayDate.getDate() + ", " + displayDate.getFullYear() + "!";
   }
 }
 
@@ -86,7 +87,7 @@ function calculateDifference(date1Input) {
 
   let result = [];
 
-  if (!date1Input || !date2Input) {
+  if (!date1Input.trim() || !date2Input) {
     resultElement.textContent = "Please input both dates before clicking the button!!";
   }
 
