@@ -50,9 +50,8 @@ function betweenTwo() {
     button3.id = "select1";
     button3.innerHTML = "Calculate Difference";
     document.getElementById('mydata').appendChild(button3);
-
     button3.addEventListener('click', () => {
-      calculateDifference(date)
+      calculateDifference(date.value)
     })
   })
 
@@ -93,7 +92,11 @@ function calculateDifference(date1Input) {
 
   else {
     // Parse the input dates into Date objects
-    let date1 = new Date(date1Input + "T00:00:00");
+    if (!date1Input.includes("T00:00:00")) {
+      date1Input += "T00:00:00";
+    }
+
+    let date1 = new Date(date1Input);
     let date2 = new Date(date2Input + "T00:00:00");
 
     // Calculate the time difference in milliseconds
