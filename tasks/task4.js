@@ -189,8 +189,8 @@ function betweenTimes() {
 
 function calculateTimeDiff(time1Input) {
   let time2Input = document.getElementById("secondTime").value;
-  const time1 = new Date(`${date.toISOString().split('T')[0]}T${time1Input}`);
-  const time2 = new Date(`${date.toISOString().split('T')[0]}T${time2Input}`);
+  const time1 = new Date(`2015-04-28T${time1Input}`);
+  const time2 = new Date(`2015-04-28T${time2Input}`);
 
   //set display element
   let resultElement = document.getElementById("mydata");
